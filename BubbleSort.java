@@ -3,22 +3,22 @@ public class BubbleSort {
     public static void bubbleSort(int[] array) {
         int arrayLength = array.length;
 
-        for (int i = 0; i < arrayLength - 1; i++) {
-            boolean swapped = performSinglePass(array, arrayLength, i);
-            if (!swapped) {
+        for (int currentIteration = 0; currentIteration < arrayLength - 1; currentIteration++) {
+            boolean swapped = performSinglePass(array, arrayLength, currentIteration);
+            if (!swapped)
                 break;
-            }
         }
     }
 
-    private static boolean performSinglePass(int[] array, int arrayLength, int passIndex) {
+    private static boolean performSinglePass(int[] array, int arrayLength, int currentIteration) {
         boolean swapped = false;
-        for (int j = 0; j < arrayLength - passIndex - 1; j++) {
-            if (array[j] > array[j + 1]) {
-                swap(array, j, j + 1);
+        int lastUnsortedIndex = arrayLength - currentIteration - 1;
+        for (int i = 0; i < lastUnsortedIndex; i++)
+            if (array[i] > array[i + 1]) {
+                swap(array, i, i + 1);
                 swapped = true;
             }
-        }
+
         return swapped;
     }
 
