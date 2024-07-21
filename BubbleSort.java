@@ -1,15 +1,7 @@
-class BubbleSort {
-
-    // Driver program
-    public static void main(String[] args) {
-        int[] array = {64, 34, 25, 12, 22, 11, 90};
-        bubbleSort(array);
-        System.out.println("Sorted array: ");
-        printArray(array);
-    }
+public class BubbleSort {
 
     // Optimized version of Bubble Sort
-    static void bubbleSort(int[] array) {
+    public static void bubbleSort(int[] array) {
         boolean swapped;
         int arrayLength = array.length;
 
@@ -30,13 +22,5 @@ class BubbleSort {
         int temp = array[firstIndex];
         array[firstIndex] = array[secondIndex];
         array[secondIndex] = temp;
-    }
-
-    // Function to print an array
-    static void printArray(int[] array) {
-        for (int element : array) {
-            System.out.print(element + " ");
-        }
-        System.out.println();
     }
 }
