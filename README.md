@@ -24,3 +24,9 @@ java Main
 
 4. Alteração de classes para Encapsulamento:
     Alterei a classe BubbleSort para encapsular o método bubbleSort e torná-lo privado. Isso torna o código mais legível e fácil de manter, além de tornar o código mais modular e reutilizável. E fazendo **ter apenas uma função** em uma classe, torna mais fácil de ler e entender o código.
+
+5. Extração de Métodos:
+    Extração de loop para o método performSinglePass.
+
+6. Testes:
+    Adicionado testes para o método bubbleSort.
